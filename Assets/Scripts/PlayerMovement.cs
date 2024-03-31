@@ -36,12 +36,17 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         InputCheck();
-        UpdateMovement();
+    }
 
+    private void FixedUpdate()
+    {
+        UpdateMovement();
     }
 
     private void UpdateMovement()
     {
+        _isOnGround = _playerGround.isOnGround;
+        _desiredVelocity = new Vector2(_directionX, 0f) * (_isOnGround ? maxSpeed : airMaxSpeed);
         _velocity = _rb.velocity;
 
         if (instantMovement)
@@ -79,8 +84,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void InputCheck()
     {
-        _isOnGround = _playerGround.isOnGround;
-
         _directionX = Input.GetAxis("Horizontal");
         if (_directionX != 0)
         {
@@ -91,7 +94,5 @@ public class PlayerMovement : MonoBehaviour
         {
             _pressingKey = false;
         }
-
-        _desiredVelocity = new Vector2(_directionX, 0f) * (_isOnGround ? maxSpeed : airMaxSpeed);
     }
 }
