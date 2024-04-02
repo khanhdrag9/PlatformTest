@@ -1036,7 +1036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897326637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 4.5, z: 0}
+  m_LocalPosition: {x: -0.5, y: 4.5, z: 0}
   m_LocalScale: {x: 1.8339616, y: 1.0435405, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1555,6 +1555,10 @@ PrefabInstance:
     - target: {fileID: 8537353168696204463, guid: ec0addd336070714cb9c926653014ded, type: 3}
       propertyPath: m_Name
       value: Door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8537353169143460892, guid: ec0addd336070714cb9c926653014ded, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8537353168696204461, guid: ec0addd336070714cb9c926653014ded, type: 3}
@@ -2274,6 +2278,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8537353168696204461, guid: ec0addd336070714cb9c926653014ded, type: 3}
+    - target: {fileID: 8537353169143460893, guid: ec0addd336070714cb9c926653014ded, type: 3}
+      propertyPath: blindTime
+      value: 0.16666667
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec0addd336070714cb9c926653014ded, type: 3}
