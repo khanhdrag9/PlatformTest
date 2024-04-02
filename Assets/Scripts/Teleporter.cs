@@ -10,7 +10,7 @@ public class Teleporter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (ignores.Contains(other.gameObject))
+        if (ignores.Contains(other.gameObject) || other.GetComponent<ThisUnitCanBeTeleported>() == null)
             return;
 
         Trigger(other.gameObject);
