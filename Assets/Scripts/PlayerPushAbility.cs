@@ -6,36 +6,41 @@ using UnityEngine;
 
 public class PlayerPushAbility : MonoBehaviour
 {
-    public GameObject pushRb;
     public LayerMask pushLayerMask;
     public Vector3 offset;
     public float distance;
     public bool bothSide;
+    public float moveSpeedScale = 0.5f;
+    public bool releaseWhenJump;
 
+    PlayerMovement _playerMovement;
     PlayerGround _playerGround;
-    Transform _pushingItem;
+    CharacterJump _characterJump;
+    GameObject _currentItem;
     bool pressed;
+    Rigidbody2D _rb;
 
     private void Start()
     {
+        _playerMovement = GetComponent<PlayerMovement>();
         _playerGround = GetComponent<PlayerGround>();
+        _characterJump = GetComponent<CharacterJump>();
+        _characterJump.onStartJump.AddListener(() =>
+        {
+            Release();
+        });
+        _rb = GetComponent<Rigidbody2D>();
     }
+
 
     private void Update()
     {
         bool input = _playerGround.isOnGround && Input.GetAxis("Push") > 0;
+        bool onPressed = false;
         if (input && !pressed)
         {
             pressed = true;
-            if (_pushingItem)
-            {
-                _pushingItem?.SetParent(null);
-                _pushingItem = null;
-            }
-            else
-            {
-                GetPushAround();
-            }
+            onPressed = true;
         }
 
         if (!input)
@@ -43,13 +48,34 @@ public class PlayerPushAbility : MonoBehaviour
             pressed = false;
         }
 
-        if(_pushingItem)
+
+        if (onPressed)
         {
-            GetPushAround();
+            if (_currentItem)
+            {
+                Release();
+            }
+            else
+            {
+                var hit = CastRaycast();
+                if (hit)
+                {
+                    var joint = hit.GetComponent<FixedJoint2D>();
+                    joint.connectedBody = _rb;
+
+                    _currentItem = hit;
+                }
+            }
         }
+
+        if (_currentItem)
+            _playerMovement.maxSpeedScale = moveSpeedScale;
+        else
+            _playerMovement.maxSpeedScale = 1;
+
     }
 
-    Transform GetPushAround()
+    GameObject CastRaycast()
     {
         var info = Physics2D.Raycast(transform.position + offset, Mathf.Sign(transform.localScale.x) * Vector2.right, distance, pushLayerMask);
         if (!info.collider)
@@ -60,24 +86,16 @@ public class PlayerPushAbility : MonoBehaviour
             }
         }
 
-        if (info.collider)
-        {
-            if (_pushingItem != info.collider.transform)
-            {
-                info.collider.transform.SetParent(pushRb.transform);
-            }
-            _pushingItem = info.collider.transform;
-        }
-        else
-        {
-            _pushingItem?.SetParent(null);
-            _pushingItem = null;
-        }
-
-        return _pushingItem;
+        return info.collider ? info.collider.gameObject : null;
     }
 
-    void SetPushingItem(Transform item)
+    public void Release()
     {
+        if (_currentItem)
+        {
+            var joint = _currentItem.GetComponent<FixedJoint2D>();
+            joint.connectedBody = null;
+            _currentItem = null;
+        }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CharacterJump : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CharacterJump : MonoBehaviour
     public float downwardMovementMultiplier;
     public float jumpCutOff;
     public float fallLimitSpeed;
+    public UnityEvent onStartJump = new UnityEvent(); 
 
 
     bool _isOnGround;
@@ -101,6 +103,7 @@ public class CharacterJump : MonoBehaviour
 
                 _velocity.y += _jumpSpeed;
                 _currentlyJumping = true;
+                onStartJump.Invoke();
             }
 
             if (jumpBuffer == 0)

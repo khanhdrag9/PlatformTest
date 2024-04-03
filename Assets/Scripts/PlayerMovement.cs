@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float airDecelaration;
     public float airTurnSpeed;
     public bool instantMovement;
+    public float maxSpeedScale = 1;
 
     float _moveSpeed;
     float _speedChange;
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D _rb;
     PlayerGround _playerGround;
+
+
 
     void Start()
     {
@@ -45,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateMovement()
     {
         _isOnGround = _playerGround.isOnGround;
-        _desiredVelocity = new Vector2(_directionX, 0f) * (_isOnGround ? maxSpeed : airMaxSpeed);
+        _desiredVelocity = new Vector2(_directionX, 0f) * (_isOnGround ? maxSpeed : airMaxSpeed) * maxSpeedScale;
         _velocity = _rb.velocity;
 
         if (instantMovement)
