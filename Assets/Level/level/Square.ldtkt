@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 2,
+    "__cWid": 2,
+    "cachedPixelData": {
+      "opaqueTiles": "1111",
+      "averageColors": "f000f000f000f000"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "Square",
+    "padding": 0,
+    "pxHei": 16,
+    "pxWid": 16,
+    "relPath": "level/Square.png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 8,
+    "uid": 131
+  }
+}
