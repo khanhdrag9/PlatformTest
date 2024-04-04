@@ -18,11 +18,11 @@ ScriptedImporter:
   _createBackgroundColor: 1
   _createLevelBoundsTrigger: 0
   _intGridValues:
-  - _key: IntGrid_1
-    _asset: {instanceID: 0}
-  - _key: IntGrid_layer_1
-    _asset: {fileID: -8464845519216895751, guid: c480f7ead2122154eaf66d4746907228, type: 3}
-  _entities: []
+  - _key: Level0_2
+    _asset: {fileID: 11400000, guid: 969c0210181e6494e860823f66866f94, type: 2}
+  _entities:
+  - _key: BoxPushable_2x2
+    _asset: {fileID: 1824121516271147472, guid: 00623299d9192724295336c08766154f, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 
