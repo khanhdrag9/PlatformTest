@@ -32,7 +32,7 @@ public class Teleporter : MonoBehaviour
         target.SetActive(false);
         yield return new WaitForSeconds(blindTime);
         target.SetActive(true);
-        target.transform.position = target.transform.position - transform.position + to.transform.position;
+        target.transform.position = to.transform.position;
         to.ignores.Add(target);
         target.GetComponentInChildren<TrailRenderer>().Clear();
     }

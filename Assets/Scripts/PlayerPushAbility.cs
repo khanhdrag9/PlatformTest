@@ -20,6 +20,7 @@ public class PlayerPushAbility : MonoBehaviour
     GameObject _currentItem;
     bool pressed;
     Rigidbody2D _rb;
+    float _cacheMass;
 
     private void Start()
     {
@@ -36,7 +37,12 @@ public class PlayerPushAbility : MonoBehaviour
 
     private void Update()
     {
-        bool input = _playerGround.isOnGround && Input.GetAxis("Push") > 0;
+        if(!_playerGround.isOnGround && _currentItem)
+        {
+            Release();
+        }
+
+        bool input = (_playerGround.isOnGround || _currentItem) && Input.GetAxis("Push") > 0;
         bool onPressed = false;
         if (input && !pressed)
         {
@@ -61,8 +67,13 @@ public class PlayerPushAbility : MonoBehaviour
                 var hit = CastRaycast();
                 if (hit)
                 {
-                    var joint = hit.GetComponent<FixedJoint2D>();
+                    var joint = hit.GetComponent<Joint2D>();
                     joint.connectedBody = _rb;
+                    joint.enabled = true;
+
+                    var hitRb = hit.GetComponent<Rigidbody2D>();
+                    _cacheMass = hitRb.mass;
+                    hitRb.mass = _rb.mass;
 
                     _currentItem = hit;
                 }
@@ -94,8 +105,11 @@ public class PlayerPushAbility : MonoBehaviour
     {
         if (_currentItem)
         {
-            var joint = _currentItem.GetComponent<FixedJoint2D>();
+            var joint = _currentItem.GetComponent<Joint2D>();
             joint.connectedBody = null;
+            joint.enabled = false;
+
+            _currentItem.GetComponent<Rigidbody2D>().mass = _cacheMass;
             _currentItem = null;
         }
     }

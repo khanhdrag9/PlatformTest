@@ -20,11 +20,17 @@ ScriptedImporter:
   _intGridValues:
   - _key: Level0_2
     _asset: {fileID: 11400000, guid: 969c0210181e6494e860823f66866f94, type: 2}
-  - _key: Level0_3
-    _asset: {fileID: 11400000, guid: 35de6226046d31c42b4a7af22f00e8ab, type: 2}
   _entities:
   - _key: BoxPushable_2x2
     _asset: {fileID: 1824121516271147472, guid: 00623299d9192724295336c08766154f, type: 3}
+  - _key: Teleport_door
+    _asset: {fileID: 8537353168696204463, guid: ec0addd336070714cb9c926653014ded, type: 3}
+  - _key: Key
+    _asset: {fileID: 6925782732303188753, guid: 850cc45990bdb4461b9f5c490f21c67e, type: 3}
+  - _key: Player_start
+    _asset: {fileID: 7242878121760603714, guid: 7546f53f25c474497879bbbe584e2143, type: 3}
+  - _key: Ladder
+    _asset: {fileID: 966584845725820800, guid: 10d43c5a30ace594eb3033f3c4958deb, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 

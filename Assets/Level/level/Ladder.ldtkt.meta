@@ -10,5 +10,19 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
   _reimportOnDependencyChange: 1
   _pixelsPerUnit: 8
-  _sprites: []
+  _sprites:
+  - name: Ladder_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 9cb6be6e8a001054db836cef9f36a4aa
+    spriteOutline: []
+    tessellationDetail: 0
   _secondaryTextures: []
