@@ -8,6 +8,7 @@ public class PlayerGround : MonoBehaviour
     public float groundLength;
     public Vector2 colliderOffset;
     public LayerMask groundLayer;
+    public LayerMask ladderLayer;
 
     private void Update()
     {

@@ -66,16 +66,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Mathf.Sign(_directionX) != Mathf.Sign(_velocity.x))
                 {
-                    _speedChange = t * Time.deltaTime;
+                    _speedChange = t * Time.fixedDeltaTime;
                 }
                 else
                 {
-                    _speedChange = a * Time.deltaTime;
+                    _speedChange = a * Time.fixedDeltaTime;
                 }
             }
             else
             {
-                _speedChange = da * Time.deltaTime;
+                _speedChange = da * Time.fixedDeltaTime;
             }
 
             _velocity.x = Mathf.MoveTowards(_velocity.x, _desiredVelocity.x, _speedChange);

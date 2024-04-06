@@ -20,6 +20,8 @@ ScriptedImporter:
   _intGridValues:
   - _key: Level0_2
     _asset: {fileID: 11400000, guid: 969c0210181e6494e860823f66866f94, type: 2}
+  - _key: Level0_3
+    _asset: {fileID: 11400000, guid: 35de6226046d31c42b4a7af22f00e8ab, type: 2}
   _entities:
   - _key: BoxPushable_2x2
     _asset: {fileID: 1824121516271147472, guid: 00623299d9192724295336c08766154f, type: 3}

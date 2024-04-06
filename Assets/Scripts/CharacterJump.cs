@@ -15,7 +15,9 @@ public class CharacterJump : MonoBehaviour
     public float downwardMovementMultiplier;
     public float jumpCutOff;
     public float fallLimitSpeed;
-    public UnityEvent onStartJump = new UnityEvent(); 
+    public float climbGravityScale;
+    public UnityEvent onStartJump = new UnityEvent();
+    public bool IsJumping => _currentlyJumping;
 
 
     bool _isOnGround;
@@ -30,12 +32,14 @@ public class CharacterJump : MonoBehaviour
 
     Rigidbody2D _rb;
     PlayerGround _playerGround;
+    LadderMovement _ladderMovement;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _playerGround = GetComponent<PlayerGround>();
+        _ladderMovement = GetComponent<LadderMovement>();
         _gravityMultiplier = defaultGravityScale;
     }
 
@@ -159,10 +163,18 @@ public class CharacterJump : MonoBehaviour
             }
         }
 
-        var newGravity = new Vector2(0, -2 * jumpHeight / (timeToJumpApex * timeToJumpApex));
-        _rb.gravityScale = newGravity.y / Physics2D.gravity.y * _gravityMultiplier;
+        if (_ladderMovement.isClimbing)
+        {
+            _rb.gravityScale = climbGravityScale;
+        }
+        else
+        {
+            var newGravity = new Vector2(0, -2 * jumpHeight / (timeToJumpApex * timeToJumpApex));
+            _rb.gravityScale = newGravity.y / Physics2D.gravity.y * _gravityMultiplier;
 
-        _rb.velocity = new Vector2(_velocity.x, Mathf.Clamp(_velocity.y, -fallLimitSpeed, 100));
+            _rb.velocity = new Vector2(_velocity.x, Mathf.Clamp(_velocity.y, -fallLimitSpeed, 100));
+        }
+
     }
 
     private void CheckInput()
