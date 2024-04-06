@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using LDtkUnity;
 using UnityEngine;
 
 public class TeleportDoor : MonoBehaviour
@@ -9,6 +10,8 @@ public class TeleportDoor : MonoBehaviour
 
     private void Start()
     {
+        var fields = GetComponent<LDtkFields>();
+        toDoor = fields.GetEntityReference("teleport_to").FindEntity().GetComponent<TeleportDoor>();
     }
     private void Update()
     {

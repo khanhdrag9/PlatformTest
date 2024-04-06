@@ -11,7 +11,7 @@
 	"iid": "a22d35f0-7820-11ed-b6fd-213e885f30da",
 	"jsonVersion": "1.5.3",
 	"appBuildId": 473703,
-	"nextUid": 151,
+	"nextUid": 153,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "LinearHorizontal",
@@ -594,6 +594,79 @@
 					"tilesetUid": null
 				}
 			]
+		},
+		{
+			"identifier": "Teleport_door",
+			"uid": 151,
+			"tags": [],
+			"exportToToc": false,
+			"allowOutOfBounds": false,
+			"doc": null,
+			"width": 12,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"minWidth": null,
+			"maxWidth": null,
+			"minHeight": null,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#00FF09",
+			"renderMode": "Rectangle",
+			"showName": true,
+			"tilesetId": null,
+			"tileRenderMode": "FitInside",
+			"tileRect": null,
+			"uiTileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0.5,
+			"pivotY": 1,
+			"fieldDefs": [
+				{
+					"identifier": "teleport_to",
+					"doc": null,
+					"__type": "EntityRef",
+					"uid": 152,
+					"type": "F_EntityRef",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "RefLinkBetweenCenters",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "CurvedArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"exportToToc": false,
+					"searchable": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
 		}
 	], "tilesets": [
 		{
@@ -757,6 +830,50 @@
 							"fieldInstances": [{ "__identifier": "Push_able", "__type": "Bool", "__value": false, "__tile": null, "defUid": 150, "realEditorValues": [{
 								"id": "V_Bool",
 								"params": [ false ]
+							}] }]
+						},
+						{
+							"__identifier": "Teleport_door",
+							"__grid": [24,17],
+							"__pivot": [0.5,1],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#00FF09",
+							"iid": "f084f0b0-d7b0-11ee-a260-51e5bc1ff91d",
+							"width": 12,
+							"height": 16,
+							"defUid": 151,
+							"px": [196,144],
+							"fieldInstances": [{ "__identifier": "teleport_to", "__type": "EntityRef", "__value": {
+								"entityIid": "fae18730-d7b0-11ee-a260-a39da750d3aa",
+								"layerIid": "e6c66f70-d7b0-11ee-b2c9-35e00f7b224a",
+								"levelIid": "166124d0-d7b0-11ee-af35-4fcf9997adfa",
+								"worldIid": "c914f9b0-c640-11ed-ad34-3371cda0821c"
+							}, "__tile": null, "defUid": 152, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["fae18730-d7b0-11ee-a260-a39da750d3aa"]
+							}] }]
+						},
+						{
+							"__identifier": "Teleport_door",
+							"__grid": [14,9],
+							"__pivot": [0.5,1],
+							"__tags": [],
+							"__tile": null,
+							"__smartColor": "#00FF09",
+							"iid": "fae18730-d7b0-11ee-a260-a39da750d3aa",
+							"width": 12,
+							"height": 16,
+							"defUid": 151,
+							"px": [116,80],
+							"fieldInstances": [{ "__identifier": "teleport_to", "__type": "EntityRef", "__value": {
+								"entityIid": "f084f0b0-d7b0-11ee-a260-51e5bc1ff91d",
+								"layerIid": "e6c66f70-d7b0-11ee-b2c9-35e00f7b224a",
+								"levelIid": "166124d0-d7b0-11ee-af35-4fcf9997adfa",
+								"worldIid": "c914f9b0-c640-11ed-ad34-3371cda0821c"
+							}, "__tile": null, "defUid": 152, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["f084f0b0-d7b0-11ee-a260-51e5bc1ff91d"]
 							}] }]
 						}
 					]
