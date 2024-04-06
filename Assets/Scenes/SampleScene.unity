@@ -686,7 +686,7 @@ MonoBehaviour:
   colliderOffset: {x: 0, y: -0.01}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 257
 --- !u!114 &1081899317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,6 +934,14 @@ PrefabInstance:
       propertyPath: m_ColliderPaths.Array.data[0].m_Collider
       value: 
       objectReference: {fileID: 9303769}
+    - target: {fileID: -6334895698111455837, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -9.776844
+      objectReference: {fileID: 0}
+    - target: {fileID: -6334895698111455837, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.0219345
+      objectReference: {fileID: 0}
     - target: {fileID: -5848554867458926549, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -981,6 +989,14 @@ PrefabInstance:
     - target: {fileID: -4560708819265430314, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
       propertyPath: m_Name
       value: level
+      objectReference: {fileID: 0}
+    - target: {fileID: -4048712657011743097, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -9.776844
+      objectReference: {fileID: 0}
+    - target: {fileID: -4048712657011743097, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 2.0219345
       objectReference: {fileID: 0}
     - target: {fileID: -1818075746500037213, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
       propertyPath: m_ColliderPaths.Array.size
@@ -5493,6 +5509,22 @@ PrefabInstance:
     - target: {fileID: -1731838186066540223, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
       propertyPath: m_Tiles.Array.data[531].second.m_TileSpriteIndex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873532263990363781, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 5.223156
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873532263990363781, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.02193451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014565483704836443, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 5.223156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014565483704836443, guid: 7bc0f7915d9dcb14aa7a0f72e9622cde, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 1.0219345
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
