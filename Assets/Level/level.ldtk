@@ -11,7 +11,7 @@
 	"iid": "a22d35f0-7820-11ed-b6fd-213e885f30da",
 	"jsonVersion": "1.5.3",
 	"appBuildId": 473703,
-	"nextUid": 153,
+	"nextUid": 158,
 	"identifierStyle": "Capitalize",
 	"toc": [],
 	"worldLayout": "LinearHorizontal",
@@ -665,6 +665,116 @@
 					"allowedRefsEntityUid": null,
 					"allowedRefTags": [],
 					"tilesetUid": null
+				},
+				{
+					"identifier": "is_locked",
+					"doc": null,
+					"__type": "Bool",
+					"uid": 156,
+					"type": "F_Bool",
+					"isArray": false,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "StraightArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"exportToToc": false,
+					"searchable": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "OnlySame",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
+				}
+			]
+		},
+		{
+			"identifier": "Key",
+			"uid": 153,
+			"tags": [],
+			"exportToToc": false,
+			"allowOutOfBounds": false,
+			"doc": null,
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"minWidth": null,
+			"maxWidth": null,
+			"minHeight": null,
+			"maxHeight": null,
+			"keepAspectRatio": false,
+			"tileOpacity": 1,
+			"fillOpacity": 0.08,
+			"lineOpacity": 0,
+			"hollow": false,
+			"color": "#BE4A2F",
+			"renderMode": "Tile",
+			"showName": true,
+			"tilesetId": 154,
+			"tileRenderMode": "FitInside",
+			"tileRect": { "tilesetUid": 154, "x": 0, "y": 0, "w": 256, "h": 256 },
+			"uiTileRect": null,
+			"nineSliceBorders": [],
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0.5,
+			"pivotY": 1,
+			"fieldDefs": [
+				{
+					"identifier": "locker",
+					"doc": null,
+					"__type": "EntityRef",
+					"uid": 157,
+					"type": "F_EntityRef",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "RefLinkBetweenCenters",
+					"editorDisplayScale": 1,
+					"editorDisplayPos": "Above",
+					"editorLinkStyle": "CurvedArrow",
+					"editorDisplayColor": null,
+					"editorAlwaysShow": false,
+					"editorShowInWorld": true,
+					"editorCutLongValues": true,
+					"editorTextSuffix": null,
+					"editorTextPrefix": null,
+					"useForSmartColor": false,
+					"exportToToc": false,
+					"searchable": false,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null,
+					"symmetricalRef": false,
+					"autoChainRef": true,
+					"allowOutOfLevelRef": true,
+					"allowedRefs": "Any",
+					"allowedRefsEntityUid": null,
+					"allowedRefTags": [],
+					"tilesetUid": null
 				}
 			]
 		}
@@ -750,6 +860,25 @@
 			"customData": [],
 			"savedSelections": [],
 			"cachedPixelData": { "opaqueTiles": "1111", "averageColors": "f000f000f000f000" }
+		},
+		{
+			"__cWid": 1,
+			"__cHei": 1,
+			"identifier": "Key2",
+			"uid": 154,
+			"relPath": "level/key.png",
+			"embedAtlas": null,
+			"pxWid": 256,
+			"pxHei": 256,
+			"tileGridSize": 256,
+			"spacing": 0,
+			"padding": 0,
+			"tags": [],
+			"tagsSourceEnumUid": null,
+			"enumTags": [],
+			"customData": [],
+			"savedSelections": [],
+			"cachedPixelData": { "opaqueTiles": "0", "averageColors": "1222" }
 		}
 	], "enums": [], "externalEnums": [], "levelFields": [] },
 	"levels": [
@@ -844,15 +973,21 @@
 							"height": 16,
 							"defUid": 151,
 							"px": [196,144],
-							"fieldInstances": [{ "__identifier": "teleport_to", "__type": "EntityRef", "__value": {
-								"entityIid": "fae18730-d7b0-11ee-a260-a39da750d3aa",
-								"layerIid": "e6c66f70-d7b0-11ee-b2c9-35e00f7b224a",
-								"levelIid": "166124d0-d7b0-11ee-af35-4fcf9997adfa",
-								"worldIid": "c914f9b0-c640-11ed-ad34-3371cda0821c"
-							}, "__tile": null, "defUid": 152, "realEditorValues": [{
-								"id": "V_String",
-								"params": ["fae18730-d7b0-11ee-a260-a39da750d3aa"]
-							}] }]
+							"fieldInstances": [
+								{ "__identifier": "teleport_to", "__type": "EntityRef", "__value": {
+									"entityIid": "fae18730-d7b0-11ee-a260-a39da750d3aa",
+									"layerIid": "e6c66f70-d7b0-11ee-b2c9-35e00f7b224a",
+									"levelIid": "166124d0-d7b0-11ee-af35-4fcf9997adfa",
+									"worldIid": "c914f9b0-c640-11ed-ad34-3371cda0821c"
+								}, "__tile": null, "defUid": 152, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["fae18730-d7b0-11ee-a260-a39da750d3aa"]
+								}] },
+								{ "__identifier": "is_locked", "__type": "Bool", "__value": true, "__tile": null, "defUid": 156, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] }
+							]
 						},
 						{
 							"__identifier": "Teleport_door",
@@ -866,14 +1001,64 @@
 							"height": 16,
 							"defUid": 151,
 							"px": [116,80],
-							"fieldInstances": [{ "__identifier": "teleport_to", "__type": "EntityRef", "__value": {
+							"fieldInstances": [
+								{ "__identifier": "teleport_to", "__type": "EntityRef", "__value": {
+									"entityIid": "f084f0b0-d7b0-11ee-a260-51e5bc1ff91d",
+									"layerIid": "e6c66f70-d7b0-11ee-b2c9-35e00f7b224a",
+									"levelIid": "166124d0-d7b0-11ee-af35-4fcf9997adfa",
+									"worldIid": "c914f9b0-c640-11ed-ad34-3371cda0821c"
+								}, "__tile": null, "defUid": 152, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["f084f0b0-d7b0-11ee-a260-51e5bc1ff91d"]
+								}] },
+								{ "__identifier": "is_locked", "__type": "Bool", "__value": true, "__tile": null, "defUid": 156, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] }
+							]
+						},
+						{
+							"__identifier": "Key",
+							"__grid": [8,16],
+							"__pivot": [0.5,1],
+							"__tags": [],
+							"__tile": { "tilesetUid": 154, "x": 0, "y": 0, "w": 256, "h": 256 },
+							"__smartColor": "#BE4A2F",
+							"iid": "8780fdc0-d7b0-11ee-a260-e1edd23e6933",
+							"width": 16,
+							"height": 16,
+							"defUid": 153,
+							"px": [68,136],
+							"fieldInstances": [{ "__identifier": "locker", "__type": "EntityRef", "__value": {
 								"entityIid": "f084f0b0-d7b0-11ee-a260-51e5bc1ff91d",
 								"layerIid": "e6c66f70-d7b0-11ee-b2c9-35e00f7b224a",
 								"levelIid": "166124d0-d7b0-11ee-af35-4fcf9997adfa",
 								"worldIid": "c914f9b0-c640-11ed-ad34-3371cda0821c"
-							}, "__tile": null, "defUid": 152, "realEditorValues": [{
+							}, "__tile": null, "defUid": 157, "realEditorValues": [{
 								"id": "V_String",
 								"params": ["f084f0b0-d7b0-11ee-a260-51e5bc1ff91d"]
+							}] }]
+						},
+						{
+							"__identifier": "Key",
+							"__grid": [28,17],
+							"__pivot": [0.5,1],
+							"__tags": [],
+							"__tile": { "tilesetUid": 154, "x": 0, "y": 0, "w": 256, "h": 256 },
+							"__smartColor": "#BE4A2F",
+							"iid": "b1c97700-d7b0-11ee-b0dc-f113a0c2e0f9",
+							"width": 16,
+							"height": 16,
+							"defUid": 153,
+							"px": [228,144],
+							"fieldInstances": [{ "__identifier": "locker", "__type": "EntityRef", "__value": {
+								"entityIid": "fae18730-d7b0-11ee-a260-a39da750d3aa",
+								"layerIid": "e6c66f70-d7b0-11ee-b2c9-35e00f7b224a",
+								"levelIid": "166124d0-d7b0-11ee-af35-4fcf9997adfa",
+								"worldIid": "c914f9b0-c640-11ed-ad34-3371cda0821c"
+							}, "__tile": null, "defUid": 157, "realEditorValues": [{
+								"id": "V_String",
+								"params": ["fae18730-d7b0-11ee-a260-a39da750d3aa"]
 							}] }]
 						}
 					]

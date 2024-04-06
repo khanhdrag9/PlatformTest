@@ -25,6 +25,8 @@ ScriptedImporter:
     _asset: {fileID: 1824121516271147472, guid: 00623299d9192724295336c08766154f, type: 3}
   - _key: Teleport_door
     _asset: {fileID: 8537353168696204463, guid: ec0addd336070714cb9c926653014ded, type: 3}
+  - _key: Key
+    _asset: {fileID: 6925782732303188753, guid: 850cc45990bdb4461b9f5c490f21c67e, type: 3}
   _enumGenerate: 0
   _enumPath: 
   _enumNamespace: 
