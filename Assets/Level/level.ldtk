@@ -1117,7 +1117,7 @@
 						},
 						{
 							"__identifier": "Player_start",
-							"__grid": [12,17],
+							"__grid": [11,17],
 							"__pivot": [0.5,1],
 							"__tags": [],
 							"__tile": { "tilesetUid": 158, "x": 0, "y": 0, "w": 128, "h": 128 },
@@ -1126,7 +1126,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 159,
-							"px": [100,144],
+							"px": [92,144],
 							"fieldInstances": []
 						}
 					]
